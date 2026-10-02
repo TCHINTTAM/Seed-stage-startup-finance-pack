@@ -1,0 +1,6 @@
+# The Python libraries this app needs. Install them with:
+#   pip install -r requirements.txt
+pandas==3.0.6       # tables of numbers (like a spreadsheet inside Python)
+streamlit==1.64.0   # turns a Python script into an interactive web app
+plotly==7.1.0       # interactive charts
+openpyxl==3.1.5     # lets pandas write Excel (.xlsx) files
