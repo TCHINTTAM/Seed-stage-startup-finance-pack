@@ -383,10 +383,24 @@ def summarise(results, month):
 
     runway = runway_months(cash)
     cash_out = find_cash_out_month(cash)
+
+    # Month-on-month MRR growth: (this month / last month) - 1.
+    # Month 1 has no previous month in the table, so we compare it with the
+    # starting customers instead (the price is the same, so this works).
+    if i > 0:
+        previous_mrr = revenue["MRR (£)"][i - 1]
+    else:
+        price = revenue["MRR (£)"][0] / revenue["Customers at end"][0]
+        previous_mrr = revenue["Customers at start"][0] * price
+    mrr_growth = revenue["MRR (£)"][i] / previous_mrr - 1
+
     return {
         "Date": revenue["Date"][i],
         "Customers": revenue["Customers at end"][i],
+        "New customers": revenue["New customers"][i],
+        "Churned customers": revenue["Churned customers"][i],
         "MRR (£)": revenue["MRR (£)"][i],
+        "MRR growth vs last month": mrr_growth,
         "ARR (£)": revenue["MRR (£)"][i] * 12,  # annual run rate
         "Headcount": results["headcount"]["Headcount"][i],
         "Net burn (£)": cash["Net burn (£)"][i],
