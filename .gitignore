@@ -5,3 +5,5 @@ __pycache__/
 *.pyc
 # Mac system files
 .DS_Store
+# Helper files Streamlit can install for AI coding assistants (machine-specific)
+.agents/
