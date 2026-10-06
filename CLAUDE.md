@@ -6,6 +6,9 @@ A "Seed-stage startup finance pack": an interactive Streamlit web app that model
 small businesses, 15 staff, £2m seed raised, monthly subscriptions).
 The model runs monthly for 36 months.
 
+Live app: https://ledgerloop-finance-pack.streamlit.app/ (Streamlit Community Cloud,
+deployed from branch `claude/seed-finance-streamlit-app-7emosi`; every push redeploys it).
+
 The owner is a student with little Python experience building a portfolio project
 for startup finance internships. Act as a **tutor as well as a builder**: they must
 understand everything you make. Explain in plain English and avoid jargon, or

@@ -372,6 +372,7 @@ with tab_scenarios:
                       title="MRR by scenario")
         fig.update_layout(yaxis_tickprefix="£", legend=dict(orientation="h", y=-0.2))
         st.plotly_chart(fig)
+        st.caption("Aggressive hiring has the same revenue as Base, so its line sits on top of the Base line.")
 
 with tab_update:
     st.subheader("Monthly investor update")
@@ -474,6 +475,9 @@ app layout in `app.py`.
 **Built with help from Claude Code**, Anthropic's AI coding assistant, which I used as a
 builder and tutor: I chose and approved the assumptions, checked the calculations by
 hand, and can explain every part of the model.
+
+**Links:** [live app](https://ledgerloop-finance-pack.streamlit.app/) ·
+[code on GitHub](https://github.com/TCHINTTAM/Seed-stage-startup-finance-pack)
 """)
 
 
